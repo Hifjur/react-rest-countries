@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Meal from '../Meal/Meal';
+import './Meals.css'
 const Meals= () =>{
     const [meals, setMeals] = useState([]);
     useEffect(() => {
@@ -12,9 +13,16 @@ const Meals= () =>{
       <div>
         <h2>Loading meals</h2>
         <h4>Meals Catagory Available:{meals.length}</h4>
+        <div className='grid'>
         {
-          meals.map(meal => <Meal name={meal.strCategory } description={meal.strCategoryDescription } pic={meal.strCategoryThumb}></Meal>)
+          meals.map(meal => <Meal 
+            key={meal.idCategory}
+            name={meal.strCategory} 
+            description={meal.strCategoryDescription } 
+            pic={meal.strCategoryThumb}
+            ></Meal>)
         }
+        </div>
       </div>
     )
   }
