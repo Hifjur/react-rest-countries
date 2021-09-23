@@ -1,14 +1,20 @@
 import './App.css';
-import { useEffect, useState } from 'react';
+import Meals from './Compnents/Meals/Meals';
+
 //rest counties is dead so I made it wiht mealdb food
 function App() {
   return (
     <div className="App">
+      {/* <Meals></Meals> */}
       <Meals></Meals>
     </div>
   );
 }
 
+
+
+
+/*
 function Meals(){
   const [meals, setMeals] = useState([]);
   useEffect(() => {
@@ -35,5 +41,5 @@ function Meal(props){
       <img src={props.pic} alt="" />
     </div>
   )
-}
+}*/
 export default App;
